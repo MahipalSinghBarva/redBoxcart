@@ -1,0 +1,134 @@
+@import '../../css.config/mixins.scss';
+
+.main-header{
+    width: 95%;
+    padding: 0 20px;
+    background-color: #212121;
+    color: white;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    z-index: 99;
+    // height: 50px;
+   
+    @include md{
+        padding: 0 40px;
+    }
+    .header-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        max-width: 1350px;
+        margin: 5px;
+        @include md{
+            // height: 80px;
+        }
+        .left{
+            list-style: none;
+            display: none;
+            gap: 25px;
+            @include md{
+                display: flex;
+            }
+            li{
+                font-size: 14px;
+                font-weight: 600;
+                cursor: pointer;
+                text-transform: uppercase;
+            }
+            .homebtn:hover{
+                color: darkred;
+                transition: 1s ease-in-out;
+            }
+            .aboutbtn:hover{
+                color: darkred;
+                transition: 1s ease-in-out;
+
+            }
+            .catbtn:hover{
+                color: darkred;
+                transition: 1s ease-in-out;
+
+            }
+           
+            
+
+        }
+        .center{
+            font-size: 28px;
+            font-weight: 700;
+            cursor: pointer;
+            color: darkred;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            @include md{
+                // font-size: 34px;
+                // position: absolute;
+                left: 50%;
+                transform: translateX(-50);
+            }
+            .c{
+                color: white;
+            }
+            .r{
+                color: white;
+            }
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+           
+            @include md{
+                gap: 25px;
+            }
+            svg{
+                font-size: 20px;
+                cursor: pointer;
+                @include md{
+                    font-size: 24px;
+                }
+            }
+            .cart-icon{
+                position: relative;
+                span{
+                    min-width: 20px;
+                    text-align: center;
+                    background-color: #8e2de2;
+                    padding: 2.5px;
+                    position: absolute;
+                    top: -5px;
+                    right: -12px;
+                    font-size: 12px;
+                    line-height: 1;
+                    border-radius: 10px;
+                }
+            }
+        }
+        .searchbtn:hover{
+            color: darkred;
+            transition: 1s ease-in-out;
+
+        }
+        .heartbtn:hover{
+            color: darkred;
+            transition: 1s ease-in-out;
+
+        }
+        .cartbtn:hover{
+            color: darkred;
+            transition: 1s ease-in-out;
+
+        }
+    }
+    &.sticky-header{
+        position: sticky;
+        top: 2px;
+        animation: stickyHeader 0.3s ease forwards;
+        
+    }
+}
+
+@keyframes stickyHeader {
+    0% {transform: translateY(-80px);}
+    100% {transform: translateY(0);}
+
+}
